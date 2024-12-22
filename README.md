@@ -75,7 +75,7 @@ Flight-Fare-Prediction/
    ```bash
    python app.py
    ```
-6. Open your browser and navigate to `http://127.0.0.1:5000` to access the application.
+6. Open your browser and navigate to `http://127.0.0.1:5000/predict` to access the application.
 
 ## 📝 Input Details
 - **✈️ Airline**: Select from the dropdown list (e.g., Indigo, Air India, etc.).
