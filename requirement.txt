@@ -1,0 +1,8 @@
+pandas
+numpy
+matplotlib
+plotly
+seaborn
+warnings
+scikit-learn
+Flask

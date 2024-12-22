@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Booking Form</title>
+    <style>
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .form-container {
+            max-width: 600px;
+            background-color: #fff;
+            margin: 50px auto;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .form-container h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        label {
+            font-weight: 500;
+            display: block;
+            margin: 10px 0 5px;
+            color: #555;
+        }
+        select, input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        select:hover, input:hover {
+            border-color: #007BFF;
+        }
+        button {
+            background-color: #007BFF;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .form-container {
+            font-size: 14px;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Flight Booking Form</h2>
+        <form method="post" action="/predict">
+            <!-- Airline Dropdown -->
+            <label for="airline">Airline</label>
+            <select id="airline" name="airline" required>
+                <option value="SpiceJet">SpiceJet</option>
+                <option value="Indigo">Indigo</option>
+                <option value="GO FIRST">GO FIRST</option>
+                <option value="Air India">Air India</option>
+                <option value="AirAsia">AirAsia</option>
+                <option value="Vistara">Vistara</option>
+                <option value="AkasaAir">AkasaAir</option>
+                <option value="AllianceAir">AllianceAir</option>
+                <option value="StarAir">StarAir</option>
+            </select>
+
+            <!-- Class Dropdown -->
+            <label for="class">Class</label>
+            <select id="class" name="class" required>
+                <option value="Economy">Economy</option>
+                <option value="Premium Economy">Premium Economy</option>
+                <option value="Business">Business</option>
+                <option value="First">First</option>
+            </select>
+
+            <!-- Source Dropdown -->
+            <label for="source">Source</label>
+            <select id="source" name="source" required>
+                <option value="Delhi">Delhi</option>
+                <option value="Mumbai">Mumbai</option>
+                <option value="Bangalore">Bangalore</option>
+                <option value="Hyderabad">Hyderabad</option>
+                <option value="Kolkata">Kolkata</option>
+                <option value="Chennai">Chennai</option>
+                <option value="Ahmedabad">Ahmedabad</option>
+            </select>
+
+            <!-- Destination Dropdown -->
+            <label for="destination">Destination</label>
+            <select id="destination" name="destination" required>
+                <option value="Mumbai">Mumbai</option>
+                <option value="Bangalore">Bangalore</option>
+                <option value="Hyderabad">Hyderabad</option>
+                <option value="Kolkata">Kolkata</option>
+                <option value="Chennai">Chennai</option>
+                <option value="Ahmedabad">Ahmedabad</option>
+                <option value="Delhi">Delhi</option>
+            </select>
+
+            <!-- Total Stops Dropdown -->
+            <label for="totalStops">Total Stops</label>
+            <select id="totalStops" name="totalStops" required>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+            </select>
+
+            <!-- Date Field -->
+            <label for="date">Date</label>
+            <input type="date" id="date" name="date" required>
+
+            <!-- Submit Button -->
+            <button type="submit">Submit</button>
+        </form>
+        <h2>
+            {{ Predicted_price }}
+        </h2>
+    </div>
+</body>
+</html>
